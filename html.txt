@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dahil Uygulaması</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f4f6fa; }
+    .topbar {
+      background: #2d3e50; color: #fff; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .topbar .tabs { display: flex; gap: 16px; }
+    .topbar .tabs button { background: #3b4a5a; color: #fff; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; }
+    .topbar .tabs button:hover { background: #4e5d6c; }
+    .topbar .close { margin-left: 24px; font-size: 20px; cursor: pointer; }
+    .timeline { background: #e9eef5; padding: 10px 24px; font-weight: bold; border-bottom: 1px solid #d0d6e0; }
+    .container { display: flex; height: calc(100vh - 92px); }
+    .sidebar {
+      width: 200px; background: #f7fafc; border-right: 1px solid #e0e0e0; padding: 16px; box-sizing: border-box;
+      display: flex; flex-direction: column; gap: 24px;
+    }
+    .main-content {
+      flex: 1; background: #fff; padding: 24px; box-sizing: border-box; position: relative;
+      display: flex; flex-direction: column; justify-content: flex-start;
+    }
+    .rightbar {
+      width: 220px; background: #f3f6fa; border-left: 1px solid #e0e0e0; padding: 16px; box-sizing: border-box;
+      display: flex; flex-direction: column; gap: 24px;
+    }
+    .help-panel {
+      position: fixed; right: 24px; bottom: 24px; background: #ffeaea; border: 1px solid #ffb3b3;
+      padding: 16px 24px; border-radius: 12px; box-shadow: 0 2px 8px #0001; min-width: 180px;
+      font-weight: bold; color: #b30000;
+    }
+    .section-title { font-weight: bold; margin-bottom: 8px; }
+    @media (max-width: 900px) {
+      .sidebar, .rightbar { display: none; }
+      .container { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="tabs">
+      <button>Genel</button>
+      <button>Özel</button>
+      <button>Anonim</button>
+      <button>Ayarlar</button>
+    </div>
+    <div style="font-size: 20px; font-weight: bold;">DAHİL UYGULAMASI</div>
+    <div class="close" title="Kapat">X</div>
+  </div>
+  <div class="timeline">
+    ZAMAN ÇİZELGESİ: Bugün - Yarın - Hafta (Burada günlere göre yapılacaklar gösterilecek)
+  </div>
+  <div class="container">
+    <div class="sidebar">
+      <div>
+        <div class="section-title">Sabitlenmiş Notlar</div>
+        <ul>
+          <li>Staj dosyası nasıl doldurulur?</li>
+          <li>Önemli duyuru örneği</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-title">Bilgi</div>
+        <ul>
+          <li>Okul rehberi</li>
+          <li>PDF arşivi</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-title">Duyurular</div>
+        <ul>
+          <li>Bölüm duyurusu</li>
+          <li>Genel duyuru</li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-content">
+      <h2>Ana İçerik</h2>
+      <p>Burası sohbet, ders notları, duyurular ve diğer ana içeriklerin gösterileceği alan.</p>
+    </div>
+    <div class="rightbar">
+      <div>
+        <div class="section-title">Ders Grupları</div>
+        <ul>
+          <li>Yaz Stajı</li>
+          <li>Proje Grubu 1</li>
+        </ul>
+      </div>
+      <div>
+        <div class="section-title">Proje Grupları</div>
+        <ul>
+          <li>Bitirme Projesi</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="help-panel">
+    Acil/Yardım: Hızlı soru sor!
+  </div>
+</body>
+</html>
